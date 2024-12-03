@@ -1,0 +1,16 @@
+{
+  "name": "bookshelf-crud",
+  "version": "1.0.0",
+  "description": "BookShelf é uma aplicação CRUD (Create, Read, Update, Delete) projetada para gerenciar uma coleção de livros. Com ela, você pode adicionar, visualizar, editar e excluir livros facilmente, organizando sua biblioteca pessoal de maneira prática e eficiente.",
+  "main": "./assets/js/main.js",
+  "scripts": {
+    "sass": "sass assets/scss/main.scss:assets/css/styles.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilhermedevmatos15/bookshelf-CRUD.git"
+  },
+  "devDependencies": {
+    "sass": "^1.81.1"
+  }
+}
