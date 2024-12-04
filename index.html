@@ -1,16 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Bookshelf - CRUD</title>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Bookshelf - CRUD</title>
+      <link
+         rel="shortcut icon"
+         href="./assets/img/favicon.png"
+         type="image/png"
+      />
 
-   <!-- ? CSS -->
-   <link rel="stylesheet" href="./assets/css/styles.css">
-   <!-- ? JS -->
-   <script src="./assets/js/main.js" type="module" defer></script>
-</head>
-<body>
-   
-</body>
+      <!-- ? CSS -->
+      <link rel="stylesheet" href="./assets/css/styles.css" />
+      <!-- ? JS -->
+      <script src="./assets/js/main.js" type="module" defer></script>
+   </head>
+   <body>
+      <header>
+         <div>
+            <div>
+               <h1>Bookshelf - CRUD</h1>
+            </div>
+            <div>
+               <p class="username"></p>
+               <i class="fa-solid fa-gear"></i>
+            </div>
+         </div>
+
+         <div class="navigation">
+            <div class="container-icon">
+               <i class="fa-solid fa-magnifying-glass"></i>
+               <span>Buscar</span>
+            </div>
+
+            <div>
+               <i class="fa-solid fa-chevron-left"></i>
+               <div>
+                  <h3>
+                     Página <span data-func="current-page"></span> de
+                     <span data-func="total-page"></span>
+                  </h3>
+                  <p>Mostrando 30 itens</p>
+               </div>
+               <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+            <button class="btn btn__add">
+               <i class="fa-solid fa-circle-plus"></i>
+            </button>
+         </div>
+      </header>
+
+      <main>
+         <table class="table">
+            <thead>
+               <tr>
+                  <th class="table__select" data-func="select-all">
+                     <!-- From Uiverse.io by DaniloMGutavo -->
+                     <label class="checkbox-container">
+                        <input
+                           class="custom-checkbox"
+                           checked=""
+                           type="checkbox"
+                        />
+                        <span class="checkmark"></span>
+                     </label>
+                  </th>
+                  <th>
+                     <span>Título</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                     <i class="fa-solid fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>Autor</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>Gênero</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>Publicação</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>Idioma</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>N° de páginas</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>Formato</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>Preço</span>
+                     <i class="fa-regular fa-square-caret-down"></i>
+                  </th>
+                  <th>
+                     <span>Ações</span>
+                  </th>
+               </tr>
+            </thead>
+
+            <tbody>
+               <tr>
+                  <td>
+                     <!-- From Uiverse.io by DaniloMGutavo -->
+                     <label class="checkbox-container">
+                        <input
+                           class="custom-checkbox"
+                           checked=""
+                           type="checkbox"
+                        />
+                        <span class="checkmark"></span>
+                     </label>
+                  </td>
+                  <td>Mundo de nárnia <span class="status">Lido</span></td>
+                  <td>Guilherme Magno</td>
+                  <td>Gênero</td>
+                  <td>12/11/2024</td>
+                  <td>Português</td>
+                  <td>245</td>
+                  <td>Digital</td>
+                  <td>Preço</td>
+                  <td>
+                     <i class="fa-solid fa-trash-can"></i>
+                     <i class="fa-solid fa-pencil"></i>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <!-- From Uiverse.io by DaniloMGutavo -->
+                     <label class="checkbox-container">
+                        <input
+                           class="custom-checkbox"
+                           checked=""
+                           type="checkbox"
+                        />
+                        <span class="checkmark"></span>
+                     </label>
+                  </td>
+                  <td>Mundo de nárnia <span class="status">Lido</span></td>
+                  <td>Guilherme Magno</td>
+                  <td>Gênero</td>
+                  <td>12/11/2024</td>
+                  <td>Português</td>
+                  <td>245</td>
+                  <td>Digital</td>
+                  <td>Preço</td>
+                  <td>
+                     <i class="fa-solid fa-trash-can"></i>
+                     <i class="fa-solid fa-pencil"></i>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <!-- From Uiverse.io by DaniloMGutavo -->
+                     <label class="checkbox-container">
+                        <input
+                           class="custom-checkbox"
+                           checked=""
+                           type="checkbox"
+                        />
+                        <span class="checkmark"></span>
+                     </label>
+                  </td>
+                  <td>Mundo de nárnia <span class="status">Lido</span></td>
+                  <td>Guilherme Magno</td>
+                  <td>Gênero</td>
+                  <td>12/11/2024</td>
+                  <td>Português</td>
+                  <td>245</td>
+                  <td>Digital</td>
+                  <td>Preço</td>
+                  <td>
+                     <i class="fa-solid fa-trash-can"></i>
+                     <i class="fa-solid fa-pencil"></i>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+
+         <p>
+            CRUD básico feito por
+            <a
+               href="https://github.com/guilhermedevmatos15"
+               target="_blank"
+               rel="nofollow"
+               >@guilhermedevferreira15</a
+            >
+         </p>
+      </main>
+   </body>
 </html>
