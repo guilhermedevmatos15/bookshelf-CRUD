@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* From Uiverse.io by DaniloMGutavo */
 .checkbox-container {
   display: inline-block;
@@ -61,6 +68,150 @@
 }
 .custom-checkbox:checked ~ .checkmark:after {
   animation: checkAnim 0.2s forwards;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header > :not(.navigation) {
+  width: 100%;
+  padding: 30px 50px;
+  background-color: #FCC737;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header > :not(.navigation) h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  user-select: none;
+  transition: color 0.5s;
+  cursor: pointer;
+}
+.header > :not(.navigation) h1:hover {
+  color: rgb(70.4571428571, 66.5428571429, 66.5428571429);
+}
+.header > :not(.navigation) p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.1rem;
+}
+.header > :not(.navigation) p span, .header > :not(.navigation) p i {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.header > :not(.navigation) p span:hover, .header > :not(.navigation) p i:hover {
+  color: #E73879;
+}
+.header > :not(.navigation) p i:hover {
+  transform: rotate(90deg);
+}
+.header > .navigation {
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #F26B0F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.header > .navigation .search-container {
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header > .navigation .navigate-container {
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.header > .navigation .navigate-container i {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.header > .navigation .navigate-container i:hover {
+  color: #FCC737;
+}
+.header > .navigation .navigate-container h3 {
+  font-weight: 500;
+}
+.header > .navigation .navigate-container p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+.header > .navigation > .btn {
+  position: absolute;
+  bottom: -100%;
+  right: 20px;
+}
+
+.btn {
+  width: 85px;
+  aspect-ratio: 1/1;
+  font-size: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.298);
+  background-color: #7E1891;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background-color: rgb(164.0236686391, 31.2426035503, 188.7573964497);
+}
+
+.inpt {
+  width: 100%;
+  max-width: 220px;
+  font-size: 0.9rem;
+  font-family: "Funnel Sans", Arial, sans-serif;
+}
+.inpt__minimalist {
+  position: relative;
+  max-width: 150px;
+  background-color: transparent;
+  border: none;
+}
+.inpt__minimalist::before {
+  content: "555";
+  position: absolute;
+  left: 0px;
+  bottom: 5px;
+  width: 100px;
+  height: 2px;
+  background-color: green;
+}
+.inpt__minimalist::placeholder {
+  color: #121111;
+}
+.inpt__minimalist:focus {
+  outline: none;
+}
+
+body {
+  width: 100%;
+  min-height: 300vh;
+  padding: 50px 30px;
+  font-family: "Funnel Sans", Arial, sans-serif;
+  color: #121111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,20 @@
+@use '../partials/variables' as *;
+
+@use 'sass:color';
+
+.btn {
+   width: 85px;
+   aspect-ratio: 1/1;
+   font-size: 2rem;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.298);
+   background-color: $color-04;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: all .5s;
+
+   &:hover {
+      background-color: color.adjust($color-04, $lightness: 10%);
+   }
+}
